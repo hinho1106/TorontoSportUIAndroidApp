@@ -7,10 +7,10 @@
     android:backgroundTint="@color/black">
 
     <TextView
-        android:id="@+id/Sport_text"
+        android:id="@+id/Week_text"
         android:layout_width="202dp"
         android:layout_height="27dp"
-        android:text="Sport"
+        android:text="Week"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textColorHighlight="@color/black"
@@ -21,30 +21,10 @@
         app:flow_verticalAlign="center"
         app:layout_constraintBottom_toTopOf="@+id/search_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintHorizontal_bias="0.078"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.39" />
-
-    <TextView
-        android:id="@+id/Ex_Word_text"
-        android:layout_width="202dp"
-        android:layout_height="27dp"
-        android:text="Excluded Word(s)"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textColorHighlight="@color/black"
-        android:textColorHint="@color/black"
-        android:textColorLink="@color/black"
-        android:textSize="16sp"
-        app:flow_horizontalAlign="center"
-        app:flow_verticalAlign="center"
-        app:layout_constraintBottom_toTopOf="@+id/search_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.076"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.902" />
+        app:layout_constraintVertical_bias="0.643" />
 
     <TextView
         android:id="@+id/Ex_Age_text"
@@ -61,10 +41,79 @@
         app:flow_verticalAlign="center"
         app:layout_constraintBottom_toTopOf="@+id/search_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintHorizontal_bias="0.078"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.78" />
+        app:layout_constraintVertical_bias="0.835" />
+
+    <EditText
+        android:id="@+id/InputFieldSport"
+        android:layout_width="196dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="212dp"
+        android:hint="Enter text"
+        app:layout_constraintBottom_toTopOf="@+id/search_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/Sport_text"
+        app:layout_constraintTop_toBottomOf="@+id/Dropin_Pg_spinner" />
+
+    <TextView
+        android:id="@+id/Sport_text"
+        android:layout_width="202dp"
+        android:layout_height="27dp"
+        android:text="Sport"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textColorHighlight="@color/black"
+        android:textColorHint="@color/black"
+        android:textColorLink="@color/black"
+        android:textSize="16sp"
+        app:flow_horizontalAlign="center"
+        app:flow_verticalAlign="center"
+        app:layout_constraintBottom_toTopOf="@+id/search_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.452" />
+
+    <Spinner
+        android:id="@+id/Dropin_Pg_spinner"
+        android:layout_width="172dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/InputFieldSport"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/Dropin_Pg_text"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Ex_Word_text"
+        android:layout_width="202dp"
+        android:layout_height="27dp"
+        android:text="Excluded Word(s)"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textColorHighlight="@color/black"
+        android:textColorHint="@color/black"
+        android:textColorLink="@color/black"
+        android:textSize="16sp"
+        app:flow_horizontalAlign="center"
+        app:flow_verticalAlign="center"
+        app:layout_constraintBottom_toTopOf="@+id/search_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.082"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.954" />
 
     <TextView
         android:id="@+id/Day_text"
@@ -81,18 +130,17 @@
         app:flow_verticalAlign="center"
         app:layout_constraintBottom_toTopOf="@+id/search_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintHorizontal_bias="0.078"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.655" />
+        app:layout_constraintVertical_bias="0.742" />
 
     <TextView
-        android:id="@+id/Week_text"
-        android:layout_width="202dp"
+        android:id="@+id/Dropin_Pg_text"
+        android:layout_width="199dp"
         android:layout_height="27dp"
-        android:text="Week"
+        android:text="Type of Drop-in Program"
         android:textAlignment="center"
-        android:textColor="@color/black"
         android:textColorHighlight="@color/black"
         android:textColorHint="@color/black"
         android:textColorLink="@color/black"
@@ -101,10 +149,10 @@
         app:flow_verticalAlign="center"
         app:layout_constraintBottom_toTopOf="@+id/search_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintHorizontal_bias="0.081"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.524" />
+        app:layout_constraintVertical_bias="0.221" />
 
     <Button
         android:id="@+id/search_button"
@@ -113,38 +161,9 @@
         android:text="@string/search"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.458" />
-
-    <TextView
-        android:id="@+id/Dropin_Pg_text"
-        android:layout_width="199dp"
-        android:layout_height="27dp"
-        android:text="Type of Drop-in Program"
-        android:textAlignment="center"
-        android:textColor="@android:color/system_accent2_600"
-        android:textColorHighlight="@color/black"
-        android:textColorHint="@color/black"
-        android:textColorLink="@color/black"
-        android:textSize="16sp"
-        app:flow_horizontalAlign="center"
-        app:flow_verticalAlign="center"
-        app:layout_constraintBottom_toTopOf="@+id/search_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.076"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.185" />
-
-    <Spinner
-        android:id="@+id/Dropin_Pg_spinner"
-        android:layout_width="172dp"
-        android:layout_height="36dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintVertical_bias="0.656" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

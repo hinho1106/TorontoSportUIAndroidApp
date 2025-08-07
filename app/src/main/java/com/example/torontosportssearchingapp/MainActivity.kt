@@ -17,7 +17,7 @@ class MainActivity : ComponentActivity() {
 
         val spinner : Spinner = findViewById(R.id.Dropin_Pg_spinner)
         // Your list of items
-        val items = listOf("Option 1", "Option 2", "Option 3")
+        val items = listOf("Ice", "Non-Ice")
         // Create the adapter
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, items)
         // Set dropdown style
