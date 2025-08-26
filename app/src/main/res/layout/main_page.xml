@@ -9,15 +9,42 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-16dp">
+        android:layout_marginTop="52dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/ExWordDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="250dp"
+            android:text="(use ; as separator)"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Ex_Word_text" />
+
+        <EditText
+            android:id="@+id/inputFieldExWord"
+            android:layout_width="196dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="456dp"
+            android:layout_marginEnd="9dp"
+            android:hint="Enter text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/Sport_text"
+            app:layout_constraintTop_toBottomOf="@+id/Dropin_Pg_spinner" />
 
         <TextView
             android:id="@+id/Dropin_Pg_text"
             android:layout_width="193dp"
             android:layout_height="25dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="99dp"
+            android:layout_marginTop="100dp"
             android:layout_marginEnd="14dp"
             android:text="Type of Drop-in Program"
             android:textAlignment="center"
@@ -27,6 +54,7 @@
             android:textSize="16sp"
             app:flow_horizontalAlign="center"
             app:flow_verticalAlign="center"
+            app:layout_constraintBottom_toTopOf="@+id/Sport_text"
             app:layout_constraintEnd_toStartOf="@+id/Dropin_Pg_spinner"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -36,8 +64,9 @@
             android:layout_width="172dp"
             android:layout_height="36dp"
             android:layout_marginStart="14dp"
-            android:layout_marginTop="88dp"
+            android:layout_marginTop="110dp"
             android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/InputFieldSport"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/Dropin_Pg_text"
             app:layout_constraintTop_toTopOf="parent" />
@@ -46,7 +75,7 @@
             android:id="@+id/Sport_text"
             android:layout_width="202dp"
             android:layout_height="27dp"
-            android:layout_marginTop="79dp"
+            android:layout_marginTop="70dp"
             android:layout_marginEnd="4dp"
             android:text="Sport"
             android:textAlignment="center"
@@ -57,6 +86,7 @@
             android:textSize="16sp"
             app:flow_horizontalAlign="center"
             app:flow_verticalAlign="center"
+            app:layout_constraintBottom_toTopOf="@+id/SportDesc"
             app:layout_constraintEnd_toStartOf="@+id/InputFieldSport"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Dropin_Pg_text" />
@@ -68,103 +98,189 @@
             android:layout_marginStart="4dp"
             android:layout_marginTop="70dp"
             android:layout_marginEnd="9dp"
+            android:layout_marginBottom="55dp"
             android:hint="Enter text"
+            app:layout_constraintBottom_toTopOf="@+id/Week_spinner"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/Sport_text"
             app:layout_constraintTop_toBottomOf="@+id/Dropin_Pg_spinner" />
 
+        <TextView
+            android:id="@+id/SportDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="215dp"
+            android:layout_marginBottom="30dp"
+            android:text="(e.g. Pickleball/Leisure Skate)"
+            app:layout_constraintBottom_toTopOf="@+id/Week_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Sport_text" />
+
+        <TextView
+            android:id="@+id/Week_text"
+            android:layout_width="202dp"
+            android:layout_height="27dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="21dp"
+            android:text="Week"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/black"
+            android:textColorHint="@color/black"
+            android:textColorLink="@color/black"
+            android:textSize="16sp"
+            app:flow_horizontalAlign="center"
+            app:flow_verticalAlign="center"
+            app:layout_constraintBottom_toTopOf="@+id/WeekDesc"
+            app:layout_constraintEnd_toStartOf="@+id/Week_spinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Sport_text" />
+
+        <Spinner
+            android:id="@+id/Week_spinner"
+            android:layout_width="172dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="294dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/Dropin_Pg_text"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/WeekDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="215dp"
+            android:layout_marginBottom="24dp"
+            android:text="(e.g. 1 for current week; \n2 for next week; and so on)"
+            app:layout_constraintBottom_toTopOf="@+id/Day_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Week_text" />
+
+        <TextView
+            android:id="@+id/Day_text"
+            android:layout_width="202dp"
+            android:layout_height="27dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="21dp"
+            android:text="Day"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/black"
+            android:textColorHint="@color/black"
+            android:textColorLink="@color/black"
+            android:textSize="16sp"
+            app:flow_horizontalAlign="center"
+            app:flow_verticalAlign="center"
+            app:layout_constraintBottom_toTopOf="@+id/Ex_Age_text"
+            app:layout_constraintEnd_toStartOf="@+id/Day_spinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Week_text" />
+
+        <Spinner
+            android:id="@+id/Day_spinner"
+            android:layout_width="172dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="390dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="57dp"
+            app:layout_constraintBottom_toTopOf="@+id/inputFieldExAge"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/Dropin_Pg_text"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/Ex_Age_text"
+            android:layout_width="202dp"
+            android:layout_height="27dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="4dp"
+            android:text="Excluded Age(s)"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/black"
+            android:textColorHint="@color/black"
+            android:textColorLink="@color/black"
+            android:textSize="16sp"
+            app:flow_horizontalAlign="center"
+            app:flow_verticalAlign="center"
+            app:layout_constraintBottom_toTopOf="@+id/ExAgeDesc"
+            app:layout_constraintEnd_toStartOf="@+id/inputFieldExAge"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Day_text" />
+
+        <EditText
+            android:id="@+id/inputFieldExAge"
+            android:layout_width="196dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="356dp"
+            android:layout_marginEnd="9dp"
+            android:layout_marginBottom="58dp"
+            android:hint="Enter text"
+            app:layout_constraintBottom_toTopOf="@+id/inputFieldExWord"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/Sport_text"
+            app:layout_constraintTop_toBottomOf="@+id/Dropin_Pg_spinner"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/Ex_Word_text"
+            android:layout_width="202dp"
+            android:layout_height="27dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="209dp"
+            android:layout_marginBottom="4dp"
+            android:text="Excluded Word(s)"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/black"
+            android:textColorHint="@color/black"
+            android:textColorLink="@color/black"
+            android:textSize="16sp"
+            app:flow_horizontalAlign="center"
+            app:flow_verticalAlign="center"
+            app:layout_constraintBottom_toTopOf="@+id/ExWordDesc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Ex_Age_text" />
+
+        <Button
+            android:id="@+id/search_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="161dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="162dp"
+            android:text="@string/search"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputFieldExWord" />
+
+        <TextView
+            android:id="@+id/ExAgeDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="41dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="249dp"
+            android:text="(use ; as separator)"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Ex_Age_text" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <TextView
-        android:id="@+id/Week_text"
-        android:layout_width="202dp"
-        android:layout_height="27dp"
-        android:text="Week"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textColorHighlight="@color/black"
-        android:textColorHint="@color/black"
-        android:textColorLink="@color/black"
-        android:textSize="16sp"
-        app:flow_horizontalAlign="center"
-        app:flow_verticalAlign="center"
-        app:layout_constraintBottom_toTopOf="@+id/search_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.078"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.643" />
-
-    <TextView
-        android:id="@+id/Ex_Age_text"
-        android:layout_width="202dp"
-        android:layout_height="27dp"
-        android:text="Excluded Age(s)"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textColorHighlight="@color/black"
-        android:textColorHint="@color/black"
-        android:textColorLink="@color/black"
-        android:textSize="16sp"
-        app:flow_horizontalAlign="center"
-        app:flow_verticalAlign="center"
-        app:layout_constraintBottom_toTopOf="@+id/search_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.078"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.835" />
-
-    <TextView
-        android:id="@+id/Ex_Word_text"
-        android:layout_width="202dp"
-        android:layout_height="27dp"
-        android:text="Excluded Word(s)"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textColorHighlight="@color/black"
-        android:textColorHint="@color/black"
-        android:textColorLink="@color/black"
-        android:textSize="16sp"
-        app:flow_horizontalAlign="center"
-        app:flow_verticalAlign="center"
-        app:layout_constraintBottom_toTopOf="@+id/search_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.082"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.954" />
-
-    <TextView
-        android:id="@+id/Day_text"
-        android:layout_width="202dp"
-        android:layout_height="27dp"
-        android:text="Day"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textColorHighlight="@color/black"
-        android:textColorHint="@color/black"
-        android:textColorLink="@color/black"
-        android:textSize="16sp"
-        app:flow_horizontalAlign="center"
-        app:flow_verticalAlign="center"
-        app:layout_constraintBottom_toTopOf="@+id/search_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.078"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.742" />
-
-    <Button
-        android:id="@+id/search_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/search"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.656" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

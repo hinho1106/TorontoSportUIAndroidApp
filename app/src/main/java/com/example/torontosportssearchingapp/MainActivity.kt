@@ -15,15 +15,25 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_page)
 
-        val spinner : Spinner = findViewById(R.id.Dropin_Pg_spinner)
+        val sportType_spinner : Spinner = findViewById(R.id.Dropin_Pg_spinner)
+        val week_spinner : Spinner = findViewById(R.id.Week_spinner)
+        val day_spinner : Spinner = findViewById(R.id.Day_spinner)
         // Your list of items
-        val items = listOf("Ice", "Non-Ice")
+        val sportType_items = listOf("Ice", "Non-Ice")
+        val week_items = listOf("Week 1", "Week 2", "Week 3", "Week 4")
+        val day_items = listOf("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
         // Create the adapter
-        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, items)
+        val sportType_adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, sportType_items)
+        val week_adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, week_items)
+        val day_adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, day_items)
         // Set dropdown style
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        sportType_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        week_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        day_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         // Attach adapter to spinner
-        spinner.adapter = adapter
+        sportType_spinner.adapter = sportType_adapter
+        week_spinner.adapter = week_adapter
+        day_spinner.adapter = day_adapter
     }
 
     override fun onDestroy() {
