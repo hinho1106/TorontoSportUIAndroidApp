@@ -9,6 +9,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.torontosportssearchingapp.ui.theme.TorontoSportsSearchingAppTheme
+import android.widget.Button
+import android.content.Intent
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,6 +36,13 @@ class MainActivity : ComponentActivity() {
         sportType_spinner.adapter = sportType_adapter
         week_spinner.adapter = week_adapter
         day_spinner.adapter = day_adapter
+
+        val btnGoNext = findViewById<Button>(R.id.search_button)
+        btnGoNext.setOnClickListener {
+            val intent = Intent(this, ResultActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 
     override fun onDestroy() {
