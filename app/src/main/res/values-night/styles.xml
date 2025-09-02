@@ -1,7 +1,8 @@
 <resources>
 
-    <style name="Widget.Theme.TorontoSportsSearchingApp.MyView" parent="">
-        <item name="android:background">@color/gray_600</item>
-        <item name="exampleColor">@color/light_blue_600</item>
+    <style name="AppTheme.WhiteBackground" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:background">@android:color/white</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:colorBackground">@android:color/white</item>
     </style>
 </resources>

@@ -37,8 +37,8 @@ class MainActivity : ComponentActivity() {
         week_spinner.adapter = week_adapter
         day_spinner.adapter = day_adapter
 
-        val btnGoNext = findViewById<Button>(R.id.search_button)
-        btnGoNext.setOnClickListener {
+        val btnGoSearch = findViewById<Button>(R.id.search_button)
+        btnGoSearch.setOnClickListener {
             val intent = Intent(this, ResultActivity::class.java)
             startActivity(intent)
             finish()
